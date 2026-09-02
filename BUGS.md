@@ -103,5 +103,5 @@ ew Date(date).getTime().
 
 **What is wrong:** Dates were displayed as raw ISO date strings instead of formatted locale date strings.
 
-**What I changed:** In src/lib/format.js, updated formatDate to convert input to 
+**What I changed:** In src/lib/format.js, updated formatDate to convert input to 
 ew Date(date) before calling 	oLocaleDateString.
