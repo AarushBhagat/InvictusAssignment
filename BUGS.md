@@ -12,7 +12,7 @@ Keep this file in the repo and **commit it** with your fixes.
 
 **What is wrong:** The list is showing oldest expenses first. Newest should be at the top.
 
-**What I changed:** In src/components/ExpenseList.jsx, reversed the sort order from  - b to dateValue(b.date) - dateValue(a.date). Also updated dateValue in src/lib/format.js to return 
+**What I changed:** In src/components/ExpenseList.jsx, reversed the sort order from a - b to dateValue(b.date) - dateValue(a.date). Also updated dateValue in src/lib/format.js to return 
 ew Date(date).getTime().
 
 ---
@@ -23,7 +23,7 @@ ew Date(date).getTime().
 
 **What is wrong:** The wrong expense is deleted because deletion and editing used array index instead of unique expense IDs.
 
-**What I changed:** Updated src/state/store.js reducer to handle DELETE_EXPENSE and UPDATE_EXPENSE by ction.id instead of array index. Updated App.jsx and ExpenseList.jsx to pass expense.id and use key={expense.id}.
+**What I changed:** Updated src/state/store.js reducer to handle DELETE_EXPENSE and UPDATE_EXPENSE by action.id instead of array index. Updated App.jsx and ExpenseList.jsx to pass expense.id and use key={expense.id}.
 
 ---
 
@@ -53,7 +53,7 @@ ew Date(date).getTime().
 
 **What is wrong:** An extra share was subtracted from the payer's balance, penalizing them and causing total group balances not to sum to zero.
 
-**What I changed:** In src/lib/balances.js, removed the conditional block that subtracted mount / n when the payer was not in shares.
+**What I changed:** In src/lib/balances.js, removed the conditional block that subtracted amount / n when the payer was not in shares.
 
 ---
 
@@ -103,5 +103,5 @@ ew Date(date).getTime().
 
 **What is wrong:** Dates were displayed as raw ISO date strings instead of formatted locale date strings.
 
-**What I changed:** In src/lib/format.js, updated ormatDate to convert input to 
+**What I changed:** In src/lib/format.js, updated formatDate to convert input to 
 ew Date(date) before calling 	oLocaleDateString.
